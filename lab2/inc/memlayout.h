@@ -33,11 +33,11 @@
  *                     |   Remapped Physical Memory   | RW/--
  *                     |                              | RW/--
  *    KERNBASE, ---->  +------------------------------+ 0xf0000000      --+
- *    KSTACKTOP        |     CPU0s Kernel Stack       | RW/--  KSTKSIZE   |
+ *    KSTACKTOP        |     CPU0s Kernel Stack      | RW/--  KSTKSIZE   |
  *                     | - - - - - - - - - - - - - - -|                   |
  *                     |      Invalid Memory (*)      | --/--  KSTKGAP    |
  *                     +------------------------------+                   |
- *                     |     CPU1s Kernel Stack       | RW/--  KSTKSIZE   |
+ *                     |     CPU1s Kernel Stack      | RW/--  KSTKSIZE   |
  *                     | - - - - - - - - - - - - - - -|                 PTSIZE
  *                     |      Invalid Memory (*)      | --/--  KSTKGAP    |
  *                     +------------------------------+                   |

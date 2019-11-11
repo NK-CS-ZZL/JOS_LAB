@@ -136,7 +136,6 @@ mem_init(void)
 	// following line.)
 
 	// Permissions: kernel R, user R
-	// PDX(UVPT) == 957
 	kern_pgdir[PDX(UVPT)] = PADDR(kern_pgdir) | PTE_U | PTE_P;
 
 	//////////////////////////////////////////////////////////////////////
@@ -171,7 +170,6 @@ mem_init(void)
 	//      (ie. perm = PTE_U | PTE_P)
 	//    - pages itself -- kernel RW, user NONE
 	// Your code goes here:
-	// UPAGES = 0xef000000  PDX = 956
 	boot_map_region(kern_pgdir, UPAGES, PTSIZE, PADDR(pages), PTE_U);
 	//////////////////////////////////////////////////////////////////////
 	// Use the physical memory that bootstack refers to as the kernel
@@ -184,7 +182,6 @@ mem_init(void)
 	//       overwrite memory.  Known as a "guard page".
 	//     Permissions: kernel RW, user NONE
 	// Your code goes here:
-	// KSTACKTOP = 0xf0000000 KSTKSIZE = 8*PGSIZE PDX = 968
 	boot_map_region(kern_pgdir, KSTACKTOP-KSTKSIZE, KSTKSIZE, PADDR(bootstack), PTE_W);
 	//////////////////////////////////////////////////////////////////////
 	// Map all of physical memory at KERNBASE.
@@ -194,7 +191,6 @@ mem_init(void)
 	// we just set up the mapping anyway.
 	// Permissions: kernel RW, user NONE
 	// Your code goes here:
-	// KERNBASE = 0xf0000000 -KERNBASE = 0x10000000 PDX = 960~1023
 	boot_map_region(kern_pgdir, KERNBASE, -KERNBASE, 0, PTE_W);
 	// Check that the initial page directory has been set up correctly.
 	check_kern_pgdir();
@@ -433,7 +429,7 @@ page_insert(pde_t *pgdir, struct PageInfo *pp, void *va, int perm)
  
 		if(page_free_list == pp)
 		{
-			page_free_list = page_free_list->pp_link;//防止页被free掉
+			page_free_list = page_free_list->pp_link;//update the new free_list header
 		}
 	}
 	else
