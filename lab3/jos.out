@@ -1,0 +1,50 @@
++ ld obj/kern/kernel
++ mk obj/kern/kernel.img
+6828 decimal is 15254 octal!
+Physical memory: 66556K available, base = 640K, extended = 65532K
+boot_alloc memory at f017f000
+Next memory at f0180000
+boot_alloc memory at f0180000
+Next memory at f01a1000
+npages: 16639
+npages_basemem: 160
+pages: f0180000
+boot_alloc memory at f01a1000
+Next memory at f01b9000
+f01b9000
+med=441
+boot_alloc memory at f01b9000
+Next memory at f01b9000
+check_page_free_list done
+check_page_alloc() succeeded!
+so far so good
+pp2 f0181fe8
+kern_pgdir f017f000
+kern_pgdir[0] is 3ff007
+check_page() succeeded!
+Virtual Address ef000000 mapped to Physical Address 180000
+PADDR(pages) 180000
+Virtual Address eec00000 mapped to Physical Address 1a1000
+Virtual Address efff8000 mapped to Physical Address 112000
+PADDR(bootstack) 112000
+Virtual Address f0000000 mapped to Physical Address 0
+check_kern_pgdir() succeeded!
+boot_alloc memory at f01b9000
+Next memory at f01b9000
+check_page_free_list done
+check_page_installed_pgdir() succeeded!
+funs f011c358
+funs[0] f0103d36
+funs[48] f0103d84
+[00000000] new env 00001000
+Incoming TRAP frame at 0xefffffbc
+SYSTEM CALL
+Incoming TRAP frame at 0xefffffbc
+SYSTEM CALL
+user_mem_check va: f010000c, len: 64
+[00001000] user_mem_check assertion failure for va f010000c
+[00001000] free env 00001000
+Destroyed the only environment - nothing more to do!
+Welcome to the JOS kernel monitor!
+Type 'help' for a list of commands.
+qemu: terminating on signal 15 from pid 8982
