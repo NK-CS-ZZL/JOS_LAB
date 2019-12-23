@@ -4,7 +4,7 @@
 ## Reference
   [JasonLeaster](https://blog.csdn.net/cinmyheart/article/details/45150461)<br/>
   [clann24](https://github.com/clann24/jos)<br/>
-  [bysui](https://blog.csdn.net/bysui/article/details/51868917)
+  [bysui](https://blog.csdn.net/bysui/article/details/51868917)<br/>
   Thanks these three guys who helped me get through. Salute!
 ## Fixing
   &ensp;&ensp;&ensp;&ensp;Due to version difference, in lab4, total score of clann24's version is 75. However, in newer version, it add one more test that judges whether ipc is able to send a vitural memory address correctly(user/sendpage.c). So total score of lab4 adjusted to 80 and there are some modifications in makefile. Open user/makefrag and kern/makefrag and you can tell the difference.
