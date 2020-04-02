@@ -10,5 +10,5 @@
   &ensp;&ensp;&ensp;&ensp;Due to version difference, in lab4, total score of clann24's version is 75. However, in newer version, it add one more test that judges whether ipc is able to send a vitural memory address correctly(user/sendpage.c). So total score of lab4 adjusted to 80 and there are some modifications in makefile. Open user/makefrag and kern/makefrag and you can tell the difference.
 ## Todo
   &ensp;&ensp;&ensp;&ensp;Unknown error occured in lab5, which means in prior labs some bugs not been found. So when do lab5, I copy another version code.<br/>
-  &ensp;&ensp;&ensp;&ensp;The error is relative to stale fileid, but I don't know where is wrong. If you find out it, do tell me and 
+  &ensp;&ensp;&ensp;&ensp;The error is relative to stale field, but I don't know where is wrong. If you find out it, do tell me and 
  I'l fix it.
